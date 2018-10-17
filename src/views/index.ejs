@@ -1,0 +1,27 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Test App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="noindex, nofollow">
+
+    <script type="text/javascript">
+        var initialState = <%- JSON.stringify(appData) %> ;
+        initialState.locationParams = document.location.search;
+        window.INITIAL_STATE = initialState;
+    </script>
+    <script src="//static.parastorage.com/services/third-party/jquery/3.1.1/dist/jquery.min.js"></script>
+    <script src="//static.parastorage.com/services/third-party/lodash/4.17.2/lodash.js"></script>
+    <!-- Latest compiled and minified CSS -->
+
+    <link  rel="stylesheet" href="./styles/index.css">
+
+</head>
+<body >
+<div class="container" id="root"><%- appData.content %></div>
+<script type="text/javascript" src="./scripts/index-bundle.js"></script>
+<script src="http://localhost:35729/livereload.js?snipver=1"></script>
+</body>
+</html>
